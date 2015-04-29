@@ -1,18 +1,20 @@
 .well {
-	background-color: yellow;
+	background-color: purple;
 	font-size: 16px;
-	height:250px;
+	height:200px;
+	color:white;
 
 }
 
 img {
-	height: 200px;
-	width: 200px;
-	margin: 2px 25px;
+	height: 300px;
+	width: 300px;
+	margin: 5px 30px;
 }
 
 .btn-sm {
 	background-color: black;
+	border: black;
 	color: white;
 }
 

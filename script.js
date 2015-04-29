@@ -25,24 +25,15 @@ for (var i=0; i<9; i++){
             imgURL = "<img src='" + results[i].image.medium_url + "'>";
         }
 
-    	
-  if (i%3 == 0){
-   		content =  "<div class='row'>"; 
-		// }
-
-		// 	content += "<div class='col-md-4 col-lg-6 attach'>";
-		// 	content += "<div class='hidden-sm hidden-xs storage'>";
-		// 	content += imgURL;
-		// 	content += "<p class='lead well'> Title: " + results[i].name + " Deck:" + deckString + "<button class='btn btn-sm btn-success'> Remove </button></p>";
-		// 	content += "</div>";
+			content += "<div class='col md-4 col-lg-4 class'"+i+">";
+			content += "<div class='hidden-sm hidden-xs storage'>";
+			content += imgURL;
+			content += "<p class='lead well'> Title: " + results[i].name + " Deck:" + deckString + "<br><button class='btn btn-sm btn-success'> Remove Details </button></p>";
+			content += "</div>";
 	
-		// if ((i+1) %3 == 0){
-		// 	content += "</div>";
-		// }
 
-		// $(".container").append(content);
-
-		// console.log ("This is i:" + i + " " + results[i].name);
+		$('.container').closest('div').append(content);
+			content="";
 
 		}
 	}
@@ -50,7 +41,7 @@ for (var i=0; i<9; i++){
 
 $(document).ready(function() {
 
-	search("batman");
+	search("batman").delay(5000);
 
 	$('.well').hide().fadeIn(1500);
 
