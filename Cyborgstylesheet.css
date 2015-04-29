@@ -1,0 +1,14 @@
+.well {
+	background-color: #002F7F;
+	font-size: 16px;
+	height:200px;
+	width:400px;
+	color:white;
+	border-radius: 5px;
+}
+
+img {
+	height: 300px;
+	width: 300px;
+	margin: 5px 30px;
+}

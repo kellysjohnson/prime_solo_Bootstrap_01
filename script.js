@@ -29,7 +29,7 @@ for (var i=0; i<9; i++){
 			content += "<div class='hidden-sm hidden-xs storage'>";
 			content += imgURL;
 			content += "<p class='lead well'> Title: " + results[i].name + " Deck:" + deckString + "<br><button class='btn btn-sm btn-success'> Remove Details </button></p>";
-			content += "</div>";
+			content += "</div></div>";
 	
 
 		$('.container').closest('div').append(content);
@@ -56,7 +56,7 @@ $(document).ready(function() {
 
 	$('.well').hide().fadeIn(1500);
 
-	$('.well').on ("click", ".btn", function(){
+	$('.well').on ("click", ".btn-success", function(){
 		$(this).parent().fadeOut(350);
 		// console.log("hi!");
 	});
