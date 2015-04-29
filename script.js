@@ -41,7 +41,18 @@ for (var i=0; i<9; i++){
 
 $(document).ready(function() {
 
-	search("batman").delay(5000);
+	$('.searchBtn').on('click', function(){
+    	$('.results').empty();
+    	search($('.searchField').val());
+    });
+
+    $('#searchField').keyup(function(key){
+        if(key.keyCode ==13){
+            $('.results').empty();
+            search($('#searchField').val());
+        }
+    });
+
 
 	$('.well').hide().fadeIn(1500);
 
