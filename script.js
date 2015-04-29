@@ -22,14 +22,14 @@ for (var i=0; i<9; i++){
         if(!results[i].image){
             imgURL = "<img src='sad_face.jpg'>";
         } else {
-            imgURL = "<img src='" + results[i].image.medium_url + "'>";
+            imgURL = "<img class='hidden-sm hidden-xs' src='" + results[i].image.medium_url + "'>";
         }
 
-			content += "<div class='col md-4 col-lg-4 class'"+i+">";
-			content += "<div class='hidden-sm hidden-xs storage'>";
+			content += "<div class='col-md-4 col-lg-4 class'"+i+">";
+//			content += "<div class='hidden-sm hidden-xs storage'>";  //remove this, so that ONLY the image hides, rather than then entire container for <img></img> and <p></p>.
 			content += imgURL;
 			content += "<p class='lead well'> Title: " + results[i].name + " Deck:" + deckString + "<br><button class='btn btn-sm btn-success'> Remove Details </button></p>";
-			content += "</div></div>";
+			content += "</div>";
 	
 
 		$('.container').closest('div').append(content);
@@ -56,8 +56,10 @@ $(document).ready(function() {
 
 	$('.well').hide().fadeIn(1500);
 
-	$('.well').on ("click", ".btn-success", function(){
-		$(this).parent().fadeOut(350);
+	$('.container').on("click", ".btn-success", function(){
+		$(this).closest('.col-md-4').fadeOut(350, function(){
+			$(this).remove();
+		});
 		// console.log("hi!");
 	});
 
