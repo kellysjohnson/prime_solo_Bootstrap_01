@@ -25,8 +25,9 @@ for (var i=0; i<9; i++){
             imgURL = "<img src='" + results[i].image.medium_url + "'>";
         }
 
-  //  		if (i%3 == 0){
-  // 			content =  "<div class='row'>"; 
+    	
+  if (i%3 == 0){
+   		content =  "<div class='row'>"; 
 		// }
 
 		// 	content += "<div class='col-md-4 col-lg-6 attach'>";
@@ -39,7 +40,7 @@ for (var i=0; i<9; i++){
 		// 	content += "</div>";
 		// }
 
-		// $(".header").append(content);
+		// $(".container").append(content);
 
 		// console.log ("This is i:" + i + " " + results[i].name);
 
